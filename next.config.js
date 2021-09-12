@@ -6,7 +6,7 @@ module.exports = function (phase, { defaultConfig }) {
   return {
     reactStrictMode: true,
     assetPrefix: urlPrefix,
-    // basePath: "/",//Link (next/link) や Router (next/router) によるリンクのベースパスは、basePath の設定の方が反映される
+    basePath: urlPrefix, 
     trailingSlash: true,
   };
 };

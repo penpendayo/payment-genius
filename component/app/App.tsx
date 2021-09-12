@@ -6,6 +6,7 @@ import Score from "./Score";
 import * as S from "../styles/App";
 import { audio } from "../utils/soundEffect";
 import type { MoneyType, Animation, GameScore } from "../types/common";
+import {addUrlPrefix} from "../utils/addUrlPrefix";
 
 const ANIMATION_CLASSNAME: {
   PAY_RETURN: Animation;
@@ -263,7 +264,7 @@ export default function App() {
   const returnChange = () => {
     let changeCopy = change;
     if (changeCopy > 0) {
-      let myMoneyCopy:MoneyType = { ...myMoney };
+      let myMoneyCopy: MoneyType = { ...myMoney };
       const commonFunction = (price: number) => {
         myMoneyCopy[price] += Math.floor(changeCopy / price);
         changeCopy -= Math.floor(changeCopy / price) * price;
@@ -316,7 +317,7 @@ export default function App() {
         100: 0,
         500: 0,
         1000: 0,
-      } ;
+      };
     });
   };
 
@@ -394,7 +395,11 @@ export default function App() {
           ) : (
             <div>会計中...</div>
           )}
-          <img src={`./image/rezi.svg`} alt={`レジ`} draggable="false" />
+          <img
+            src={addUrlPrefix("/image/rezi.svg")}
+            alt={`レジ`}
+            draggable="false"
+          />
         </S.Accounting>
         <Money
           money={paidMoney}
@@ -407,7 +412,7 @@ export default function App() {
         />
         <S.Wallet>
           <img
-            src={`./image/wallet.svg`}
+            src={addUrlPrefix("/image/wallet.svg")}
             alt={`がま口の財布`}
             draggable="false"
           />

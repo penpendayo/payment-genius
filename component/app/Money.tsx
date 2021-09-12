@@ -2,6 +2,7 @@ import { TransitionGroup, CSSTransition } from "react-transition-group";
 
 import * as S from "../styles/Money";
 import type { MoneyType, Animation } from "../types/common";
+import { addUrlPrefix } from "./../utils/addUrlPrefix";
 
 type Props = {
   money: MoneyType;
@@ -33,7 +34,10 @@ export default function Money({
               }
               appear={true}
             >
-              <img src={`./image/${price}.png`} alt={`${price}円の画像`} />
+              <img
+                src={addUrlPrefix("/image/${price}.png")}
+                alt={`${price}円の画像`}
+              />
             </CSSTransition>
           ))}
       </TransitionGroup>

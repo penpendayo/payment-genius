@@ -2,6 +2,7 @@ import React, { ReactNode } from "react";
 import Link from "next/link";
 
 import * as S from "../styles/Layout";
+import { addUrlPrefix } from "./../utils/addUrlPrefix";
 
 type Props = {
   children: ReactNode;
@@ -14,7 +15,7 @@ export default function Layout({ children }: Props) {
       <S.Container>
         <S.Header>
           <S.SiteTitle>
-            <Link href="./">
+            <Link href="/">
               <a>💴支払いの天才💴</a>
             </Link>
           </S.SiteTitle>
@@ -30,19 +31,19 @@ export default function Layout({ children }: Props) {
               <ul>
                 <li>
                   🔰
-                  <Link href="rule">
+                  <Link href="/rule">
                     <a> ゲームのルール</a>
                   </Link>
                 </li>
                 <li>
                   📚
-                  <Link href="edu">
+                  <Link href="/edu">
                     <a>小銭を最小限にする支払い方法</a>
                   </Link>
                 </li>
                 <li>
                   🔥
-                  <Link href="question">
+                  <Link href="/question">
                     <a>激ムズ問題に挑戦</a>
                   </Link>
                 </li>
@@ -58,8 +59,9 @@ export default function Layout({ children }: Props) {
                   </a>
                 </li>
                 <li>
-                  <img src="./image/githubicon.svg" alt="" />
+                  <img src={addUrlPrefix("/image/githubicon.svg")} alt="" />
                   <a href="https://github.com/penpendayo/payment-genius/">
+                    {" "}
                     GitHub
                   </a>
                 </li>
@@ -69,9 +71,9 @@ export default function Layout({ children }: Props) {
               <h3>連絡先</h3>
               <ul>
                 <li>
-                  <img src="./image/twittericon.svg" alt="" />
+                  <img src={addUrlPrefix("/image/twittericon.svg")} alt="" />
                   <address>
-                    <a href="https://twitter.com/penpen_dev">Twitter</a>
+                    <a href="https://twitter.com/penpen_dev"> Twitter</a>
                   </address>
                 </li>
               </ul>

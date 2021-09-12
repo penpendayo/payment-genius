@@ -2,6 +2,7 @@ import Head from "next/head";
 import type { NextPage } from "next";
 
 import * as S from "../component/styles/Article";
+import { addUrlPrefix } from "./../component/utils/addUrlPrefix";
 
 const Usage: NextPage = () => {
   return (
@@ -12,7 +13,11 @@ const Usage: NextPage = () => {
       </Head>
       <S.ArticleContainer>
         <h1>未実装です😭😭😭</h1>
-        <img src="./image/akey-kanasimu.png" alt="" width="300px" />
+        <img
+          src={addUrlPrefix("/image/akey-kanasimu.png")}
+          alt=""
+          width="300px"
+        />
       </S.ArticleContainer>
     </>
   );

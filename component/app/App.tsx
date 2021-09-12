@@ -6,7 +6,7 @@ import Score from "./Score";
 import * as S from "../styles/App";
 import { audio } from "../utils/soundEffect";
 import type { MoneyType, Animation, GameScore } from "../types/common";
-import {addUrlPrefix} from "../utils/addUrlPrefix";
+import { addUrlPrefix } from "../utils/addUrlPrefix";
 
 const ANIMATION_CLASSNAME: {
   PAY_RETURN: Animation;

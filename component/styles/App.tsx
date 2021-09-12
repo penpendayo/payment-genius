@@ -1,6 +1,7 @@
 import styled, { css, keyframes } from "styled-components";
 
 import { media } from "../utils/mediaQuery";
+import { addUrlPrefix } from "../utils/addUrlPrefix";
 import * as color from "../utils/color";
 /* ----------------------------------------main---------------------------------------- */
 export const GridContainer = styled.div`
@@ -126,7 +127,7 @@ export const Paid = styled.div`
   grid-area: paidPrice;
   margin-right: 40px;
   justify-content: flex-end;
-  background: url("./image/arrowup.svg") no-repeat left/contain;
+  background: url(${addUrlPrefix("/image/arrowup.svg")}) no-repeat left/contain;
   ${paidAndChangeCommon};
   ${media.phone`    
     margin-right: 10px;
@@ -138,7 +139,8 @@ export const Change = styled.div`
   justify-content: flex-start;
   margin-left: 20px;
   text-align: left;
-  background: url("./image/arrowdown.svg") no-repeat right/contain;
+  background: url(${addUrlPrefix("/image/arrowdown.svg")}) no-repeat
+    right/contain;
   animation: both appear 3s 1 0.4s;
   ${paidAndChangeCommon}
   ${media.phone`    

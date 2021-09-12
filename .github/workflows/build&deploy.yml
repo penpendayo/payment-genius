@@ -18,7 +18,7 @@ jobs:
           npm ci
           npm run build
         env:
-          URL_PREFIX: /penpen-dev.com
+          URL_PREFIX: payment-genius
       - name: 🟡rsyncコマンドでデプロイ
         run: rsync -auvz -e "ssh -i key -o StrictHostKeyChecking=no -p 10022" --delete --checksum "./out/" "$USER_ID@$SERVER_HOST:/home/$USER_ID/penpen-dev.com/public_html/payment-genius/"
         env:

@@ -56,19 +56,6 @@ export const SiteTitle = styled.h1`
     text-decoration: none;
     color: inherit;
   }
-  &::after {
-    transform: rotateZ(3deg);
-    content: "";
-    width: 110px;
-    height: 110px;
-    background-image: url("./image/akey-pay.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: right center;
-    position: absolute;
-    right: 0;
-    ${media.phone`background:none;`}
-  }
 `;
 
 export const SiteDescription = styled.div`
@@ -82,6 +69,7 @@ export const Footer = styled.footer`
   }
   ul {
     list-style-type: none;
+    padding-left: 2rem;
   }
   address {
     display: inline;
@@ -89,6 +77,7 @@ export const Footer = styled.footer`
   }
 
   & > div {
+    gap: 10px;
     margin: 0 auto;
     width: 860px;
     display: flex;
@@ -98,9 +87,9 @@ export const Footer = styled.footer`
     }
     ${media.phone`
       gap: 0px;
-     padding-left: 0px;
-     width:100%;
-     flex-direction:column;
+      padding-left: 0px;
+      width:100%;
+      flex-direction:column;
 
   `}
   }

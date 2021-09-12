@@ -14,7 +14,7 @@ export default function Layout({ children }: Props) {
       <S.Container>
         <S.Header>
           <S.SiteTitle>
-            <Link href="/">
+            <Link href="./">
               <a>💴支払いの天才💴</a>
             </Link>
           </S.SiteTitle>

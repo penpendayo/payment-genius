@@ -35,7 +35,7 @@ export default function Money({
               appear={true}
             >
               <img
-                src={addUrlPrefix("/image/${price}.png")}
+                src={addUrlPrefix(`/image/${price}.png`)}
                 alt={`${price}円の画像`}
               />
             </CSSTransition>

@@ -1,5 +1,5 @@
 name: 🟤ビルド→rsyncコマンドでXサーバーにデプロイ
-on: [issues]
+on: [push]
 jobs:
   deploy:
     runs-on: ubuntu-latest

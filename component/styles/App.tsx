@@ -1,3 +1,4 @@
+import React from "react";
 import styled, { css, keyframes } from "styled-components";
 
 import { media } from "../utils/mediaQuery";
@@ -91,7 +92,7 @@ export const Accounting = styled.div`
   }
 `;
 
-export const Subtotal = styled.span<{ animationTime: number }>`
+export const Subtotal = styled.span<{ animationTime: number; children?: React.ReactNode }>`
   ${({ animationTime }) => {
     const keyframe = keyframes`
     0% {
